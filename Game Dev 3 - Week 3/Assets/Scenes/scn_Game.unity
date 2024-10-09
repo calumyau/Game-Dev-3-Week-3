@@ -28275,7 +28275,6 @@ GameObject:
   - component: {fileID: 1215652262}
   - component: {fileID: 1215652260}
   - component: {fileID: 1215652261}
-  - component: {fileID: 1215652263}
   m_Layer: 0
   m_Name: lvl_TinyDungeon_Towers
   m_TagString: Untagged
@@ -28581,47 +28580,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1215652263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215652254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85b156b310ef7874480e7bf7c59e3dc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 0}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1215652260}
-        m_TargetAssemblyTypeName: GameDevWithCalum.Enemies.Enemies_Tower_Animations,
-          Assembly-CSharp
-        m_MethodName: PlayerHasBeenSpottedAnimation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1215652261}
-        m_TargetAssemblyTypeName: GameDevWithCalum.Enemies.Enemies_Tower_Audio, Assembly-CSharp
-        m_MethodName: PlayAlarmBell
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1231796292
 GameObject:
   m_ObjectHideFlags: 0
@@ -28665,6 +28623,7 @@ GameObject:
   - component: {fileID: 1296627592}
   - component: {fileID: 1296627594}
   - component: {fileID: 1296627593}
+  - component: {fileID: 1296627595}
   m_Layer: 0
   m_Name: TowerEyesight
   m_TagString: Untagged
@@ -28751,7 +28710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc8c5f708eebd34cbf9fd223cb316d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpotted: {fileID: 0}
+  playerSpotted: {fileID: 11400000, guid: 4194c102f3989804d9e79745b31b92e4, type: 2}
 --- !u!58 &1296627594
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -28787,6 +28746,47 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1296627595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296627590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b156b310ef7874480e7bf7c59e3dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 4194c102f3989804d9e79745b31b92e4, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1215652260}
+        m_TargetAssemblyTypeName: GameDevWithCalum.Enemies.Enemies_Tower_Animations,
+          Assembly-CSharp
+        m_MethodName: PlayerHasBeenSpottedAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1215652261}
+        m_TargetAssemblyTypeName: GameDevWithCalum.Enemies.Enemies_Tower_Audio, Assembly-CSharp
+        m_MethodName: PlayAlarmBell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1346700568
 GameObject:
   m_ObjectHideFlags: 0
