@@ -2,19 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemies_Tower_Audio : MonoBehaviour
+
+namespace GameDevWithCalum.Enemies
 {
-    AudioSource alarmRepeater;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        alarmRepeater = GetComponent<AudioSource>();
-    }
 
-    public void PlayAlarmBell()
+    public class Enemies_Tower_Audio : MonoBehaviour
     {
-        alarmRepeater.pitch = Random.Range(0.8f, 1.3f);
-        alarmRepeater.Play();
+        AudioSource alarmRepeater;
+
+        // Start is called before the first frame update
+        void Start()
+        {
+            alarmRepeater = GetComponent<AudioSource>();
+        }
+
+        public void PlayAlarmBell()
+        {
+            alarmRepeater.pitch = Random.Range(0.8f, 1.3f);
+            alarmRepeater.Play();
+        }
     }
 }
